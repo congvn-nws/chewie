@@ -25,7 +25,7 @@ class _CupertinoOptionsDialogState extends State<CupertinoOptionsDialog> {
             .map(
               (option) => CupertinoActionSheetAction(
                 onPressed: () => option.onTap!(),
-                child: Text(option.title, style: TextStyle(color: Color.blue)),
+                child: Text(option.title, style: TextStyle(color: Color(0x96000000))),
               ),
             )
             .toList(),
