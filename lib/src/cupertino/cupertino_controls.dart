@@ -188,10 +188,15 @@ class _CupertinoControlsState extends State<CupertinoControls> with SingleTicker
         color: Colors.transparent,
         padding: const EdgeInsets.only(left: 4.0, right: 8.0),
         margin: const EdgeInsets.only(right: 6.0),
-        child: Icon(
-          Icons.subtitles,
-          color: iconColor,
-          size: 18,
+        child: Container(
+          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+          decoration: BoxDecoration(
+            color: Colors.black54,
+            borderRadius: BorderRadius.all(
+              Radius.circular(6),
+            ),
+          ),
+          child: Text('CC', style: TextStyle(color: Colors.white, fontSize: 16)),
         ),
       ),
     );
