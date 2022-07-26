@@ -665,12 +665,16 @@ class _CupertinoControlsState extends State<CupertinoControls> with SingleTicker
 
   void _cancelAndRestartTimer() {
     _hideTimer?.cancel();
-
-    setState(() {
-      notifier.hideStuff = false;
-
-      _startHideTimer();
-    });
+    if (!notifier.hideStuff) {
+      setState(() {
+        notifier.hideStuff = true;
+      });
+    } else {
+      setState(() {
+        notifier.hideStuff = false;
+        _startHideTimer();
+      });
+    }
   }
 
   Future<void> _initialize() async {
